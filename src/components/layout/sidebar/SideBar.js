@@ -40,9 +40,12 @@ const SideBar = ({ visibleDrawer, setVisibleDrawer }) => {
         <Menu.Item key="3" icon={<PieChartOutlined />}>
           <Link to="/home">Home</Link>
         </Menu.Item>
-        <Menu.Item key="4" icon={<PieChartOutlined />}>
-          <Link to="/users">Users</Link>
-        </Menu.Item>
+        {JSON.parse(localStorage.getItem("token")).roles ===
+            "admin" && (
+              <Menu.Item key="4" icon={<PieChartOutlined />}>
+              <Link to="/users">Users</Link>
+            </Menu.Item>
+          )}
       </Menu>
 
       {/*  Drawer for mobile */}
@@ -86,9 +89,13 @@ const SideBar = ({ visibleDrawer, setVisibleDrawer }) => {
           <Menu.Item key="3" icon={<PieChartOutlined />}>
             <Link to="/home">Home</Link>
           </Menu.Item>
-          <Menu.Item key="4" icon={<PieChartOutlined />}>
-          <Link to="/users">Users</Link>
-        </Menu.Item>
+          {JSON.parse(localStorage.getItem("token")).roles ===
+            "admin" && (
+              <Menu.Item key="4" icon={<PieChartOutlined />}>
+              <Link to="/users">Users</Link>
+            </Menu.Item>
+          )}
+         
         </Menu>
       </Drawer>
     </div>

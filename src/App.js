@@ -18,8 +18,8 @@ function App() {
       <Routes>
       {/*   <Route path="/employe" element={<Dashboard />} />
         <Route path="/notification" element={<Notification />} /> */}
-        <Route path="/create-employe" element={<CreateEmploye />} />
-        <Route path="/create-timesheet" element={<CreateTimeSheet />} />
+        {/* <Route path="/create-employe" element={<CreateEmploye />} />
+        <Route path="/create-timesheet" element={<CreateTimeSheet />} /> */}
         {/* <Route path="/timesheet" element={<TimeSheet />} /> */}
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
